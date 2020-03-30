@@ -49,7 +49,7 @@ DATABASES = {
     # Raises ImproperlyConfigured Exception
     # if DATABASE_URL Not in os.environ
     "default": env.db(
-        "DATABASE_URL", default="postgres:///everycheese"
+        "DATABASE_URL", default="postgres:///everycheese_123"
     )
 }
 DATABASES["default"]["ATOMIC_REQUESTS"] = True
@@ -84,8 +84,7 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     "everycheese.users.apps.UsersConfig",
-    "everycheese.cheeses.apps.CheesesConfig",
-    # Your stuff: custom apps go here
+    'everycheese.cheeses',
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
