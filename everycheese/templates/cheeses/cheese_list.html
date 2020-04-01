@@ -10,4 +10,9 @@
         <li><a href="{% url 'cheeses:detail' cheese.slug %}">{{ cheese.name }}</a></li>
     {% endfor %}
 </ul>
+
+<hr>
+<p>Don't see a cheese listed here?</p>
+
+<a href="{% url 'cheeses:add' %}" class="btn btn-primary">Add Cheese</a>
 {% endblock  %}
